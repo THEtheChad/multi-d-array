@@ -6,12 +6,32 @@ A multi dimensional array toolkit for node.
 Install the module with: `npm install multi-d-array`
 
 ```javascript
-var multi_d_array = require('multi-d-array');
-multi_d_array.awesome(); // "awesome"
+var Multi = require('multi-d-array');
 ```
 
 ## Documentation
-_(Coming soon)_
+
+Creating a multidimensional array.
+```javascript
+var array_2d = Multi(4, 7);
+var array_3d = Multi(5, 3, 8);
+```
+
+Iterating over every element.
+```javascript
+array_2d.forEach(function(value, key, array){
+	console.log(value, key, array);
+});
+```
+
+Modifying values.
+```javascript
+var idx = 0;
+
+array_2d.forEach(function(value, key, array){
+	array[key] = idx++;
+});
+```
 
 ## Examples
 _(Coming soon)_
